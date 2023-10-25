@@ -1,10 +1,11 @@
 import "./App.css"
 import React from 'react';
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <div>
-      <h1>T-Rand</h1>
+     <Header />
     </div>
   );
 }
