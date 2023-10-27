@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@600&display=swap');
+$defaultColor: #1C1B1F;
+$myFont: 'Open Sans', sans-serif;
+
+.Container {
+    color: $defaultColor;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 40px;
+    font-size: 32px;
+    margin-left: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 200px;
+}
+
+.Randomizer {
+    border-radius: 20px;
+    border: 4px solid var(--Green, #32C958);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    width: 191px;
+    padding: 10px;
+    font-family: $myFont;
+    color: var(--Green, #32C958);
+    font-size: 16px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.Randomizer:active {
+    background-color: #3e8e41;
+    color:  white;
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+}
