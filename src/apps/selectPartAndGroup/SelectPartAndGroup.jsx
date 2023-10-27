@@ -11,7 +11,6 @@ const SelectPartAndGroup = () => {
               <SelectPart />
               <SelectGroup />       
           </div>
-
         <div>
           <button className='Randomizer'>Randomize</button>
         </div>
