@@ -1,7 +1,17 @@
+@import "/src/styles/Variables/Variables.scss";
+
 .SelectGroup {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 116.5px;
+    gap: 130.5px;
 }
 
+.text {
+    font-family: $BodyFont;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: $Black;
+}

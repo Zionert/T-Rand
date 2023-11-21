@@ -8,7 +8,7 @@ const SelectGroup = () => {
 
   return (
     <div className='SelectGroup'>
-      <div>Number of teams</div>
+      <div className='text'>Number of teams</div>
       <DropDown 
         options={options}
       />
