@@ -6,7 +6,7 @@ import TeamShow from "./teamShow/TeamShow";
 
 function App() {
   return (
-    <div>
+    <div className="light">
       <Header />
       <SelectPartAndGroup />
       <TeamShow />

@@ -1,0 +1,21 @@
+@import "/src/styles/Variables/Variables.scss";
+
+button {
+    background-color: none;
+    border: none;
+}
+
+.Icon {
+    background-color: $Background-Light;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.Sun {
+    color: yellow;
+}
+
+.Moon {
+    color: darkblue;
+}

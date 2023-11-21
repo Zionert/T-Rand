@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@600&display=swap');
+
 $Black: #1C1B1F;
 $GreenColor: var(--Green, #32C958);
-$Background: var(--Grey, #D9D9D9);  
-
+$Grey: var(--Grey, #D9D9D9);
+$Background-Light: var(--Grey, #D9D9D9); 
+$Background-Dark: var(--Dark, #1C1B1F); 
 
 $TitleFont: Montserrat, sans-serif;
 $BodyFont: "Open sans", sans-serif;
@@ -34,11 +36,12 @@ $BodyFont: "Open sans", sans-serif;
         width: 100px;
         height: 30px;
         justify-content: flex-end;
-        gap: 24px;
+        gap: 18px;
         align-items: center;
         border-radius: 15px;
         border: 1px solid $Black;
-        background: $Background
+        background: $Background-Light;
+        font-size: 18px;
       }
       
       svg {
@@ -47,7 +50,7 @@ $BodyFont: "Open sans", sans-serif;
       }
 
       .DropDown-Wrapper {
-        background: #fff;
+        background: $Background-Light;
         position: relative;
         font-family: $BodyFont;
         font-size: 22px;
@@ -71,7 +74,7 @@ $BodyFont: "Open sans", sans-serif;
       
       li {  
         position: relative;
-        background-color: $Background;
+        background-color: $Background-Light;
         cursor: pointer;
         padding: 8px;
       }
@@ -81,7 +84,7 @@ $BodyFont: "Open sans", sans-serif;
       }
 
       li:hover {
-        font-weight: 600;
+        color: $GreenColor;
       }
 
 }
