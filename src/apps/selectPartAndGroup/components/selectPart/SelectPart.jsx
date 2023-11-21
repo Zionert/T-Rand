@@ -1,11 +1,16 @@
 import React from 'react'
-import DropDown from '../dropDown/DropDown'
 import './SelectPart.scss'
+import DropDown from '../dropDown/DropDown.jsx'
 const SelectPart = () => {
+
+  const options = [4, 8, 16]
+
   return (
     <div className='SelectPart'>
-        <div>Number of participants</div>
-        <DropDown />
+      <div>Number of participants</div>
+      <DropDown 
+        options={options}
+      />
     </div>
   )
 }
