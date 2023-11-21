@@ -1,15 +1,45 @@
-import React from 'react'
-import './DropDown.scss'
-const DropDown = () => {
-  return (
-    <div>
-        <button className='DropDown'>
-          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
-            <path d="M5 5.5L0 0.5H10L5 5.5Z" fill="#1C1B1F"/>
-          </svg>
-        </button>
-    </div>
-  )
-}
+import React, { useState } from 'react';
+import './DropDown.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
-export default DropDown
+const DropDown = ({ options }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [dropdownValue, setDropdownValue] = useState(0);
+
+  const changeValue = (item) => {
+    setDropdownValue(item);
+    setIsOpen(false);
+  };
+
+  return (
+    <div className='DropDown-Wrapper'>
+      <button onClick={() => setIsOpen(!isOpen)}>
+        <div>
+          {dropdownValue !== 0 ? dropdownValue : ' '}
+        </div>
+
+        <div>
+          {!isOpen ? (
+            <FontAwesomeIcon icon={faCaretUp} className='caret' />
+          ) : (
+            <FontAwesomeIcon icon={faCaretDown} className='caret' />
+          )}
+        </div>
+      </button>
+
+      {isOpen && (
+        <ul>
+          <li style={{visibility: 'hidden', background: 'none', height: '0.01px', zIndex: '-1'}}>0</li>
+          {options.map((item, index) => (
+            <li key={index} onClick={() => changeValue(item)}>
+              {item}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
+
+export default DropDown;
