@@ -12,7 +12,7 @@ const SelectPartAndGroup = () => {
               <SelectGroup />       
           </div>
         <div>
-          <button className='Randomizer'>Randomize</button>
+          {/* <button className='Randomizer'>Randomize</button> */}
         </div>
       </div>   
     </div>

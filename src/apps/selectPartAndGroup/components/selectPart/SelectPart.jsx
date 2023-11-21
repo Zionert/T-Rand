@@ -7,7 +7,7 @@ const SelectPart = () => {
 
   return (
     <div className='SelectPart'>
-      <div>Number of participants</div>
+      <div className='text'>Number of participants</div>
       <DropDown 
         options={options}
       />

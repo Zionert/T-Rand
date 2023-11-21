@@ -1,6 +1,17 @@
+@import "/src/styles/Variables/Variables.scss";
+
 .SelectPart {
     display: flex;
     align-items: center;
     gap: 40px;
-    margin: 10px 0;
+    margin-bottom: 12px;
+}
+
+.text {
+    font-family: $BodyFont;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: $Black;
 }
