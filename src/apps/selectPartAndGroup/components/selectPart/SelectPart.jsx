@@ -8,7 +8,7 @@ const SelectPart = () => {
   return (
     <div className='SelectPart'>
       <div className='text'>Number of participants</div>
-      <DropDown 
+      <DropDown
         options={options}
       />
     </div>

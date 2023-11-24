@@ -1,5 +1,89 @@
 @import "/src/styles/Variables/Variables.scss";
 
-.DropDown-Wrapper {
-    @include dropdownStyle();
+.btnDrop {
+    cursor: pointer;
+    position: inherit;
+    z-index: 1;
+    display: flex;
+    width: 100px;
+    height: 30px;
+    justify-content: flex-end;
+    gap: 18px;
+    align-items: center;
+    border-radius: 15px;
+    border: 1px solid $Black;
+    background: $Background-Light;
+    font-size: 18px;
+    svg {
+        margin-right: 15px;
+        margin-top: 4px;
+      }
+  }
+
+.DropdownList {
+    position: absolute;
+    width: 98px;
+    text-align: center;
+    border-radius: 0px 0px 18px 18px;
+    list-style: none;
+    font-size: 18px;
+    margin: 0;            
+    margin-top: -16px;   
+    border: 1px solid $Black; 
+    border-top: none;
+    transition: height 0.3s ease-out;
+    color: $Black;
+    li {  
+        position: relative;
+        background-color: $Background-Light;
+        cursor: pointer;
+        padding: 8px;
+    }
+
+    li:hover {
+        color: $GreenColor;
+    }
 }
+
+.DropdownList  li:last-child {
+    border-radius: 0px 0px 18px 18px;
+}
+
+.Invisible {
+    visibility: hidden;
+    background: none;
+    height: 0.01px;
+    z-index: -1;
+}
+  
+.btnDrop[data-active='true'] {
+    position: relative;
+    z-index: 2;
+  } 
+
+.caret {
+    margin-bottom: 4px;
+}
+
+.light {
+     
+}
+
+.dark {
+    .DropdownList {
+        color: $Grey;
+        border: solid 1px $Grey;
+        li {
+            background-color: $Background-Dark;
+        }
+    }
+    .btnDrop {
+        color: $Grey;
+        background-color: $Background-Dark;
+        border: solid 1px $Grey;
+        svg {
+            color: $Grey;
+        }
+    }
+}
+    

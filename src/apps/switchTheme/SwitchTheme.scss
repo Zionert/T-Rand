@@ -1,21 +1,34 @@
 @import "/src/styles/Variables/Variables.scss";
 
-button {
-    background-color: none;
-    border: none;
+.Switch {
+    transition: 0.8s;
+    height: 40px;
+    width: 40px;
 }
 
-.Icon {
+button {
     background-color: $Background-Light;
     border: none;
-    font-size: 40px;
-    cursor: pointer;
 }
 
-.Sun {
-    color: yellow;
+.Toggle {
+    display: flex;
+    font-size: 18px;
+    font-family: $BodyFont;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-.Moon {
-    color: darkblue;
+.light {
+
+}
+
+.dark {
+    button {
+        background-color: $Background-Dark
+    }
+    .Toggle {
+        color: $Grey;
+    }
 }

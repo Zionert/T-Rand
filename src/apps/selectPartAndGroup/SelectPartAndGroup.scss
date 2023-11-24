@@ -1,7 +1,6 @@
 @import "/src/styles/Variables/Variables.scss";
 
 .Container {
-    color: $Black;
     font-family: $BodyFont;
     margin-top: 40px;
     font-size: 32px;
@@ -12,8 +11,14 @@
     align-items: center;
 }
 
-.Randomizer {
-    margin-top: 10px;
-    @include buttonStyle();
+.light {
+    .text {
+        color: $Black;
+    }
 }
 
+.dark {
+    .text {
+        color: $Grey;
+    }
+}

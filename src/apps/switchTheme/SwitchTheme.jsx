@@ -1,27 +1,24 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./SwitchTheme.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faToggleOn, faToggleOff } from '@fortawesome/free-solid-svg-icons';
 
-const SwitchTheme = () => {
-
-  const [theme, setTheme] = useState(false)
-  
-  const changeTheme = () => {
-    setTheme(!theme);
-  };
-
+const SwitchTheme = ({ setTheme, theme }) => {
 
   return (
-    <div>
-        <button onClick={changeTheme}>
-        <div>
-        {!theme ? (
-            <FontAwesomeIcon icon={faSun} className='Icon Sun' />
+    <div className={theme}>
+        <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+          {theme === 'light' ? (
+            <div className='Toggle'>
+              <FontAwesomeIcon icon={faToggleOff} className='Switch'/>
+              Light Mode
+            </div>
           ) : (
-            <FontAwesomeIcon icon={faMoon} className='Icon Moon'/>
+            <div className='Toggle'>
+              <FontAwesomeIcon icon={faToggleOn} className='Switch'/>
+              Dark Mode
+            </div>
           )}
-        </div>
         </button>
     </div>
   )
