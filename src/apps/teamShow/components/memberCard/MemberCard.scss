@@ -1,0 +1,31 @@
+@import "/src/styles/Variables/Variables.scss";
+
+.input_member {
+    width: 400px;
+    height: 48px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 18px;
+    text-align: center;
+    background: none;
+    margin: 5px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.light {
+    .text {
+        color: $Black;
+    }
+}
+
+.dark {
+    .text {
+        color: $Grey;
+    }
+    .input_member {
+        border: 1px solid $Grey;
+    }
+}
