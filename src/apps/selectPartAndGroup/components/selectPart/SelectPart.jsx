@@ -1,7 +1,7 @@
 import React from 'react'
 import './SelectPart.scss'
 import DropDown from '../dropDown/DropDown.jsx'
-const SelectPart = () => {
+const SelectPart = ({ onSelectPart }) => {
 
   const options = [4, 8, 16]
 
@@ -10,6 +10,7 @@ const SelectPart = () => {
       <div className='text'>Number of participants</div>
       <DropDown
         options={options}
+        onSelect={onSelectPart}
       />
     </div>
   )

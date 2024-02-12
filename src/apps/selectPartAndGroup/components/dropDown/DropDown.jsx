@@ -4,12 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { ThemeContext } from '../../../../context/ThemeContext';
 
-const DropDown = ({ options }) => {
+const DropDown = ({ options, onSelect }) => {
   const { theme } = useContext(ThemeContext);
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownValue, setDropdownValue] = useState(0);
 
   const changeValue = (item) => {
+    onSelect(item);
     setDropdownValue(item);
     setIsOpen(false);
   };

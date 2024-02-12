@@ -2,7 +2,6 @@ import "./App.scss"
 import React, { useContext, useEffect } from 'react';
 import Header from "./header/Header";
 import SelectPartAndGroup from "./selectPartAndGroup/SelectPartAndGroup";
-import TeamShow from "./teamShow/TeamShow";
 import { ThemeContext } from "../context/ThemeContext";
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
         theme={theme}
       />
       <SelectPartAndGroup />
-      <TeamShow />
     </div>
   );
 }

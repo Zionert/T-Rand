@@ -1,0 +1,41 @@
+@import "/src/styles/Variables/Variables.scss";
+
+.teamShow_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans';
+}
+
+.teams_container {
+    display: grid;
+    column-gap: 195px;
+    margin-top: 20px;
+
+    &.teams1 {
+        margin-top: 80px;
+        .team {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            column-gap: 80px;
+        }
+    }
+
+    &.teams2 {
+        grid-template-columns: repeat(2, auto);
+    }
+
+
+    &.teams4 {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+  
+.team h3{
+    color: $GreenColor;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+
