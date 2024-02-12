@@ -1,8 +1,13 @@
 import React from 'react'
 
 const TeamShow = () => {
+
+  
+
   return (
-    <div>TeamShow</div>
+    <div>
+      
+    </div>
   )
 }
 
