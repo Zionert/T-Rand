@@ -29,7 +29,7 @@ const SelectPartAndGroup = () => {
               <SelectGroup theme={theme} onSelectGroup={handleGroupChange}/>       
           </div>
         <div>
-          {/* <button className='Randomizer'>Randomize</button> */}
+          <button className='Randomizer'>Randomize</button>
         </div>
       </div>
       <TeamShow theme={theme} selectedPart={selectPart} selectedGroup={selectGroup} />  
@@ -37,4 +37,4 @@ const SelectPartAndGroup = () => {
   )
 }
 
-export default SelectPartAndGroup
+export default SelectPartAndGroup 

@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
 }
 
 .light {
@@ -21,4 +22,17 @@
     .text {
         color: $Grey;
     }
+}
+
+.Randomizer {
+    position: absolute;
+    width: 184px;
+    height: 48px;
+    border: solid 4px $GreenColor;
+    color: $GreenColor;
+    border-radius: 20px;
+    font-size: 18px;
+    left: 45.5%;
+    top: 185px;
+    cursor: pointer;
 }
