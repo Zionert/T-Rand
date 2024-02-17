@@ -1,6 +1,8 @@
 import React from 'react'
-import './SelectPart.scss'
 import DropDown from '../dropDown/DropDown.jsx'
+
+import './SelectPart.scss'
+
 const SelectPart = ({ onSelectPart }) => {
 
   const options = [4, 8, 16]

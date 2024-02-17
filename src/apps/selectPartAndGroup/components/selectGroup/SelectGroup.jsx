@@ -1,6 +1,7 @@
 import React from 'react'
-import './SelectGroup.scss'
 import DropDown from '../dropDown/DropDown.jsx'
+
+import './SelectGroup.scss'
 
 const SelectGroup = ({ onSelectGroup }) => {
 
@@ -9,10 +10,10 @@ const SelectGroup = ({ onSelectGroup }) => {
   return (
     <div className='SelectGroup'>
       <div className='text'>Number of teams</div>
-      <DropDown 
-        options={options}
-        onSelect={onSelectGroup}
-      />
+        <DropDown 
+          options={options}
+          onSelect={onSelectGroup}
+        />
     </div>
   )
 }
