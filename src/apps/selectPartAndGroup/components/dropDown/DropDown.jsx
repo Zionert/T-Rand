@@ -1,8 +1,9 @@
 import React, { useContext, useState, useRef, useEffect } from 'react';
-import './DropDown.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { ThemeContext } from '../../../../context/ThemeContext';
+
+import './DropDown.scss';
 
 const DropDown = ({ options, onSelect }) => {
   const { theme } = useContext(ThemeContext);
@@ -54,7 +55,7 @@ const DropDown = ({ options, onSelect }) => {
 
       {isOpen && (
         <ul ref={menuRef} className='DropdownList'>
-          <li className='Invisible'>0</li>
+          <li className='Invisible'></li>
           {options.map((item, index) => (
             <li key={index} onClick={() => changeValue(item)}>
               {item}

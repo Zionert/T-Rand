@@ -1,9 +1,10 @@
-// TeamShow.jsx
-import React from 'react';
-import './TeamShow.scss';
+import {React} from 'react';
 import MemberCard from './components/memberCard/MemberCard';
 
-const TeamShow = ({ selectedPart, selectedGroup, theme }) => {
+import './TeamShow.scss';
+
+const TeamShow = ({ selectedPart, selectedGroup, theme, members, setMembers, buttonPress  }) => {
+
   const generateTeams = () => {
     const teams = [];
     const participantsPerTeam = selectedPart / selectedGroup;
@@ -11,7 +12,17 @@ const TeamShow = ({ selectedPart, selectedGroup, theme }) => {
     for (let i = 1; i <= selectedGroup; i++) {
       const teamMembers = [];
       for (let j = 1; j <= participantsPerTeam; j++) {
-        teamMembers.push(<MemberCard theme={theme} key={`${i}-${j}`} />);
+        const memberIndex = (i - 1) * participantsPerTeam + j;
+        teamMembers.push(
+          <MemberCard 
+            key={memberIndex}
+            members={members} 
+            setMembers={setMembers} 
+            theme={theme} 
+            participantIndex={memberIndex}
+            buttonPress={buttonPress}
+          />
+        );
       }
       teams.push(
         <div key={i} className='team'>
@@ -22,16 +33,13 @@ const TeamShow = ({ selectedPart, selectedGroup, theme }) => {
         </div>
       );
     }
-
     return teams;
   };
-
-  const teamsContainerClass = ` teams${selectedGroup}`;
 
   return (
     <div className='teamShow_container'>
       {selectedPart > 0 && selectedGroup > 0 && (
-        <div className={`teams_container${teamsContainerClass}`}>
+        <div className={`teams_container teams${selectedGroup}`}>
           {generateTeams()}
         </div>
       )}

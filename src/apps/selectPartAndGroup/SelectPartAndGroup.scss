@@ -5,11 +5,10 @@
     margin-top: 40px;
     font-size: 32px;
     margin-left: 152px;
-    max-width: 40%;
+    max-width: 47%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
 }
 
 .light {
@@ -25,14 +24,13 @@
 }
 
 .Randomizer {
-    position: absolute;
     width: 184px;
     height: 48px;
     border: solid 4px $GreenColor;
     color: $GreenColor;
     border-radius: 20px;
     font-size: 18px;
-    left: 45.5%;
+    left: 45.2%;
     top: 185px;
     cursor: pointer;
 }
