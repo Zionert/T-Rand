@@ -12,7 +12,7 @@ const SelectPartAndGroup = () => {
   const [members, setMembers] = useState([])
   const [selectPart, setSelectPart] = useState(0)
   const [selectGroup, setSelectGroup] = useState(0)
-  const [buttonPress, setButtonPress] = useState(0)
+  const [buttonPress, setButtonPress] = useState(false)
 
   const handlePartChange = (value) => {
     setSelectPart(value)
@@ -34,7 +34,7 @@ const SelectPartAndGroup = () => {
           copyArray[j] = temp;
       }
         setMembers(copyArray) 
-        setButtonPress(buttonPress + 1)
+        setButtonPress(!buttonPress)
       }
       console.log('Members:', members)
   }
