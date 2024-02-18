@@ -8,20 +8,19 @@ import './SelectPartAndGroup.scss'
 
 const SelectPartAndGroup = () => {
 
-  const { theme } = useContext(ThemeContext)
-  const [members, setMembers] = useState([])
-  const [selectPart, setSelectPart] = useState(0)
-  const [selectGroup, setSelectGroup] = useState(0)
-  const [buttonPress, setButtonPress] = useState(false)
+  const { theme, buttonPress, setButtonPress } = useContext(ThemeContext);
+  const [members, setMembers] = useState([]);
+  const [selectPart, setSelectPart] = useState(0);
+  const [selectGroup, setSelectGroup] = useState(0);
 
   const handlePartChange = (value) => {
-    setSelectPart(value)
-    setMembers([])
+    setSelectPart(value);
+    setMembers([]);
   }
 
   const handleGroupChange = (value) => {
-    setSelectGroup(value)
-    setMembers([])
+    setSelectGroup(value);
+    setMembers([]);
   }
 
   const handleRandom = (membersList) => {
@@ -34,9 +33,9 @@ const SelectPartAndGroup = () => {
           copyArray[j] = temp;
       }
         setMembers(copyArray) 
-        setButtonPress(!buttonPress)
+        setButtonPress(!buttonPress);
       }
-      console.log('Members:', members)
+      console.log('Members:', members);
   }
 
   return (
@@ -66,10 +65,9 @@ const SelectPartAndGroup = () => {
         theme={theme} 
         selectedPart={selectPart} 
         selectedGroup={selectGroup}
-        buttonPress={buttonPress}
       />  
     </div>
   )
 }
 
-export default SelectPartAndGroup 
+export default SelectPartAndGroup

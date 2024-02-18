@@ -1,8 +1,9 @@
-// MemberCard.jsx
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import './MemberCard.scss';
+import { ThemeContext } from '../../../../context/ThemeContext.jsx';
 
-function MemberCard({ theme, members, setMembers, participantIndex, buttonPress }) {
+function MemberCard({ members, setMembers, participantIndex }) {
+  const { theme, buttonPress } = useContext(ThemeContext);
   const [inputValue, setInputValue] = useState('');
 
   const handleChange = (event) => {
