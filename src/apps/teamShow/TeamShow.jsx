@@ -3,7 +3,7 @@ import MemberCard from './components/memberCard/MemberCard';
 
 import './TeamShow.scss';
 
-const TeamShow = ({ selectedPart, selectedGroup, theme, members, setMembers, buttonPress  }) => {
+const TeamShow = ({ selectedPart, selectedGroup, theme, members, setMembers  }) => {
 
   const generateTeams = () => {
     const teams = [];
@@ -20,7 +20,6 @@ const TeamShow = ({ selectedPart, selectedGroup, theme, members, setMembers, but
             setMembers={setMembers} 
             theme={theme} 
             participantIndex={memberIndex}
-            buttonPress={buttonPress}
           />
         );
       }
