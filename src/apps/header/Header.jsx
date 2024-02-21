@@ -1,6 +1,7 @@
 import React from 'react'
-import './Header.scss'
 import SwitchTheme from '../switchTheme/SwitchTheme'
+
+import './Header.scss'
 
 const Header = ({ setTheme, theme }) => {
   return (

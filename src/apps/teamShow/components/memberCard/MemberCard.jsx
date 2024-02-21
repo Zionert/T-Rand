@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
-import './MemberCard.scss';
 import { ThemeContext } from '../../../../context/ThemeContext.jsx';
+
+import './MemberCard.scss';
 
 function MemberCard({ members, setMembers, participantIndex }) {
   const { theme, buttonPress } = useContext(ThemeContext);
@@ -11,7 +12,6 @@ function MemberCard({ members, setMembers, participantIndex }) {
     updatedMembers[participantIndex - 1] = event.target.value;
     setMembers(updatedMembers);
     setInputValue(event.target.value);
-    console.log(participantIndex - 1);
   };
 
   useEffect(() => {

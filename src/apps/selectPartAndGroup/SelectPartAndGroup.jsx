@@ -35,7 +35,6 @@ const SelectPartAndGroup = () => {
         setMembers(copyArray) 
         setButtonPress(!buttonPress);
       }
-      console.log('Members:', members);
   }
 
   return (
